@@ -28,7 +28,12 @@ struct UserView: View {
                 
                 Spacer()
                 
-                NavigationLink("Go to Detail", destination: DetailView(viewModel: viewModel))
+                HStack {
+                    NavigationLink("Go to Profile", destination: ProfileView())
+                    Spacer()
+                    NavigationLink("Go to Detail", destination: DetailView(viewModel: viewModel))
+                }
+                .padding()
             }
         }
     }
